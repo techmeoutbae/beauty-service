@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Appointment | Business Name</title>
+  <meta name="description" content="Calendar-based booking demo with provider selection, deposits, and Stripe-ready checkout flow." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header class="topbar inner-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio Demo</small></span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="gallery.html">Before &amp; After</a>
+      <a href="memberships.html">Memberships</a>
+      <a class="active" href="booking.html">Book</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="page-main">
+  <section class="page-hero narrow">
+    <div class="container">
+      <span class="eyebrow">BOOKING DEMO</span>
+      <h1>Reserve a service with a provider, date, time, and deposit.</h1>
+      <p>This flow is designed for beauty brands that need a premium front-end experience with Stripe deposit support and Vercel-ready backend integration.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container booking-grid">
+      <form class="booking-form" id="bookingForm">
+        <div class="form-row two-col">
+          <label>Full Name<input type="text" name="fullName" required placeholder="Your name" /></label>
+          <label>Email<input type="email" name="email" required placeholder="you@example.com" /></label>
+        </div>
+        <div class="form-row two-col">
+          <label>Phone<input type="tel" name="phone" required placeholder="(000) 000-0000" /></label>
+          <label>Provider<select name="provider" required><option value="">Choose provider</option><option>Stylist 1</option><option>Stylist 2</option><option>Stylist 3</option><option>First Available</option></select></label>
+        </div>
+        <div class="form-row two-col">
+          <label>Service<select name="service" required><option value="">Choose service</option><option value="service-1">Service 1</option><option value="service-2">Service 2</option><option value="service-3">Service 3</option></select></label>
+          <label>Appointment Date<input type="date" name="date" id="appointmentDate" required /></label>
+        </div>
+        <div class="form-row">
+          <span class="label-title">Select time</span>
+          <div class="time-slots" id="timeSlots"></div>
+          <input type="hidden" name="time" id="selectedTime" required />
+        </div>
+        <div class="form-row two-col">
+          <label>Add-on<select name="addon"><option>None</option><option>Upgrade 1</option><option>Upgrade 2</option></select></label>
+          <label>Deposit Amount<select name="deposit"><option value="25">$25 deposit</option><option value="50">$50 deposit</option><option value="100">$100 deposit</option></select></label>
+        </div>
+        <label>Notes<textarea name="notes" rows="4" placeholder="Preferences, consultation notes, accessibility info, etc."></textarea></label>
+        <label class="checkbox"><input type="checkbox" name="policy" required /> I agree to the booking and cancellation policy.</label>
+        <div class="booking-actions">
+          <button class="btn btn-dark" type="submit">Pay Deposit & Reserve</button>
+          <button class="btn btn-light" type="button" id="saveDraftBtn">Save Booking Draft</button>
+        </div>
+        <p class="form-note" id="bookingMessage"></p>
+      </form>
+      <aside class="booking-sidebar">
+        <div class="calendar-card">
+          <div class="calendar-head">
+            <button id="prevMonth" type="button">←</button>
+            <strong id="calendarLabel">Month</strong>
+            <button id="nextMonth" type="button">→</button>
+          </div>
+          <div class="calendar-grid week-days">
+            <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+          </div>
+          <div class="calendar-grid" id="calendarGrid"></div>
+        </div>
+        <div class="summary-card" id="bookingSummary">
+          <h2>Booking summary</h2>
+          <p>Select service details to preview the deposit checkout summary.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+<footer class="footer minimal-footer"><div class="container footer-bottom"><small>© <span id="year"></span> Business Name</small></div></footer>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
