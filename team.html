@@ -1,1 +1,217 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Team | Business Name</title><link rel="stylesheet" href="css/styles.css" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></head><body><header class="topbar inner-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio Demo</small></span></a><button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="nav"><a href="services.html">Services</a><a class="active" href="team.html">Team</a><a href="gallery.html">Before &amp; After</a><a href="memberships.html">Memberships</a><a href="booking.html">Book</a><a href="contact.html">Contact</a></nav></div></header><main class="page-main"><section class="page-hero narrow"><div class="container"><span class="eyebrow">MEET THE TEAM</span><h1>Provider pages that help clients choose with confidence.</h1><p>Use this section to highlight specialties, credentials, years in practice, aesthetic style, and booking preferences.</p></div></section><section class="section"><div class="container team-grid"><article class="team-card detail"><div class="avatar large">S1</div><h2>Stylist 1</h2><p>Specialty placeholder · Certified in [service] · Signature aesthetic description placeholder.</p><ul><li>Preferred services: Service 1, Service 2</li><li>Experience: X+ years</li><li>Best fit: New guest / maintenance / advanced treatment</li></ul><a class="btn btn-light" href="booking.html">Book Stylist 1</a></article><article class="team-card detail"><div class="avatar large">S2</div><h2>Stylist 2</h2><p>Specialty placeholder · Certified in [service] · Signature aesthetic description placeholder.</p><ul><li>Preferred services: Service 2, Service 3</li><li>Experience: X+ years</li><li>Best fit: Bridal / transformation / consult-based</li></ul><a class="btn btn-light" href="booking.html">Book Stylist 2</a></article><article class="team-card detail"><div class="avatar large">S3</div><h2>Stylist 3</h2><p>Specialty placeholder · Certified in [service] · Signature aesthetic description placeholder.</p><ul><li>Preferred services: Service 1, Service 3</li><li>Experience: X+ years</li><li>Best fit: VIP maintenance / recurring clients</li></ul><a class="btn btn-light" href="booking.html">Book Stylist 3</a></article></div></section></main><footer class="footer minimal-footer"><div class="container footer-bottom"><small>© <span id="year"></span> Business Name</small></div></footer><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team | Business Name</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="topbar inner-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio</small></span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="services.html">Services</a>
+        <a class="active" href="team.html">Team</a>
+        <a href="gallery.html">Before &amp; After</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="booking.html">Book</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero narrow">
+      <div class="container">
+        <span class="eyebrow">PRIVATE TEAM DIRECTORY</span>
+        <h1>Provider selection presented with the same polish as the service menu.</h1>
+        <p>This page helps premium clients choose the right artist or specialist without making the experience feel crowded, generic, or transactional.</p>
+      </div>
+    </section>
+
+    <section class="section team-directory-section">
+      <div class="container team-page-shell">
+        <div class="provider-directory reveal">
+          <div class="provider-tabs" role="tablist" aria-label="Team directory">
+            <button class="provider-tab active" type="button" role="tab" aria-selected="true" aria-controls="provider-panel-amelia" id="provider-tab-amelia" data-provider-tab="amelia">Amelia Rose</button>
+            <button class="provider-tab" type="button" role="tab" aria-selected="false" aria-controls="provider-panel-sienna" id="provider-tab-sienna" data-provider-tab="sienna">Sienna Vale</button>
+            <button class="provider-tab" type="button" role="tab" aria-selected="false" aria-controls="provider-panel-noa" id="provider-tab-noa" data-provider-tab="noa">Noa Hart</button>
+          </div>
+
+          <div class="provider-panel active" id="provider-panel-amelia" role="tabpanel" aria-labelledby="provider-tab-amelia" data-provider-panel="amelia">
+            <article class="provider-profile-card">
+              <div class="provider-profile-head">
+                <div class="avatar large">AR</div>
+                <div>
+                  <span class="pill">Lead Skin Specialist</span>
+                  <h2>Amelia Rose</h2>
+                  <p>Known for corrective facials, calm treatment pacing, and a refined client experience built around long-term skin plans.</p>
+                </div>
+              </div>
+              <div class="provider-meta">
+                <div><strong>8+ years</strong><span>Advanced skin work</span></div>
+                <div><strong>Best for</strong><span>New skin clients</span></div>
+                <div><strong>Books for</strong><span>Facials and consults</span></div>
+              </div>
+              <div class="provider-tag-list">
+                <span>Barrier repair</span>
+                <span>Texture correction</span>
+                <span>Luxury consultation</span>
+              </div>
+              <div class="provider-actions">
+                <a class="btn btn-dark" href="booking.html?provider=Amelia%20Rose&amp;service=platinum-renewal-facial">Book Amelia</a>
+                <a class="btn btn-light" href="services.html">Explore Services</a>
+              </div>
+            </article>
+            <aside class="provider-side-card">
+              <h3>Signature approach</h3>
+              <ul class="provider-side-list">
+                <li>Consultation-led treatment mapping for premium skincare clients.</li>
+                <li>Pairs best with Platinum Renewal Facial and Glass Skin Consultation.</li>
+                <li>Strong fit for first-time guests who want a high-trust experience.</li>
+              </ul>
+              <div class="provider-availability">
+                <div class="provider-slot"><strong>Next opening</strong><span>Thursday · 10:30 AM</span></div>
+                <div class="provider-slot"><strong>Client type</strong><span>Corrective facial programs</span></div>
+              </div>
+            </aside>
+          </div>
+
+          <div class="provider-panel" id="provider-panel-sienna" role="tabpanel" aria-labelledby="provider-tab-sienna" data-provider-panel="sienna" hidden>
+            <article class="provider-profile-card">
+              <div class="provider-profile-head">
+                <div class="avatar large">SV</div>
+                <div>
+                  <span class="pill">Lash &amp; Brow Artist</span>
+                  <h2>Sienna Vale</h2>
+                  <p>Precision-focused detail artist for clients booking polished brows, lifted lashes, and highly visual refinement services.</p>
+                </div>
+              </div>
+              <div class="provider-meta">
+                <div><strong>6+ years</strong><span>Detail-focused work</span></div>
+                <div><strong>Best for</strong><span>Definition and shape</span></div>
+                <div><strong>Books for</strong><span>Brow and lash design</span></div>
+              </div>
+              <div class="provider-tag-list">
+                <span>Brow mapping</span>
+                <span>Lamination</span>
+                <span>Event-ready styling</span>
+              </div>
+              <div class="provider-actions">
+                <a class="btn btn-dark" href="booking.html?provider=Sienna%20Vale&amp;service=architect-brow-design">Book Sienna</a>
+                <a class="btn btn-light" href="services.html">Explore Services</a>
+              </div>
+            </article>
+            <aside class="provider-side-card">
+              <h3>Signature approach</h3>
+              <ul class="provider-side-list">
+                <li>Clean, editorial-looking results without overworking shape or finish.</li>
+                <li>Pairs best with Architect Brow Design and Lift + Lamination Ritual.</li>
+                <li>Ideal for detail-conscious clients preparing for events or shoots.</li>
+              </ul>
+              <div class="provider-availability">
+                <div class="provider-slot"><strong>Next opening</strong><span>Friday · 1:15 PM</span></div>
+                <div class="provider-slot"><strong>Client type</strong><span>Brow and lash refinement</span></div>
+              </div>
+            </aside>
+          </div>
+
+          <div class="provider-panel" id="provider-panel-noa" role="tabpanel" aria-labelledby="provider-tab-noa" data-provider-panel="noa" hidden>
+            <article class="provider-profile-card">
+              <div class="provider-profile-head">
+                <div class="avatar large">NH</div>
+                <div>
+                  <span class="pill">Body Ritual Specialist</span>
+                  <h2>Noa Hart</h2>
+                  <p>Specializes in sculpting sessions and luxury body rituals with a more private, plan-based treatment experience.</p>
+                </div>
+              </div>
+              <div class="provider-meta">
+                <div><strong>7+ years</strong><span>Body treatment expertise</span></div>
+                <div><strong>Best for</strong><span>Series and ritual clients</span></div>
+                <div><strong>Books for</strong><span>Sculpting and glow work</span></div>
+              </div>
+              <div class="provider-tag-list">
+                <span>Body contouring</span>
+                <span>Event prep</span>
+                <span>Private treatment plans</span>
+              </div>
+              <div class="provider-actions">
+                <a class="btn btn-dark" href="booking.html?provider=Noa%20Hart&amp;service=sculpt-contour-session">Book Noa</a>
+                <a class="btn btn-light" href="services.html">Explore Services</a>
+              </div>
+            </article>
+            <aside class="provider-side-card">
+              <h3>Signature approach</h3>
+              <ul class="provider-side-list">
+                <li>High-touch body services framed around comfort, outcome clarity, and premium pacing.</li>
+                <li>Pairs best with Sculpt + Contour Session and Full Body Glow Ritual.</li>
+                <li>Best fit for clients booking package pathways or treatment plans.</li>
+              </ul>
+              <div class="provider-availability">
+                <div class="provider-slot"><strong>Next opening</strong><span>Saturday · 4:00 PM</span></div>
+                <div class="provider-slot"><strong>Client type</strong><span>Plan-based body programs</span></div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band compact-cta-band">
+      <div class="container cta-grid premium-cta-grid">
+        <div>
+          <span class="eyebrow">CHOICE WITH CONFIDENCE</span>
+          <h2>Let premium clients choose a provider without slowing down the booking path.</h2>
+          <p>The team page now works like a curated directory instead of a generic bio list, keeping provider selection elegant and conversion-focused.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-dark" href="booking.html">Open Booking</a>
+          <a class="btn btn-light" href="contact.html?inquiryType=Consultation">Request Team Guidance</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-mark">LOGO</span>
+          <span>
+            <strong>Business Name</strong>
+            <small>Luxury Beauty Studio</small>
+          </span>
+        </div>
+        <p>Premium booking, service merchandising, memberships, and inquiry flows designed for high-end beauty brands.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="gallery.html">Before &amp; After</a>
+        <a href="booking.html">Book</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="booking-policy.html">Booking Policy</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Business Phone<br />Business Email<br />Business Address</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Business Name. All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

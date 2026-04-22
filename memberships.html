@@ -1,1 +1,175 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Memberships | Business Name</title><link rel="stylesheet" href="css/styles.css" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></head><body><header class="topbar inner-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio Demo</small></span></a><button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="nav"><a href="services.html">Services</a><a href="team.html">Team</a><a href="gallery.html">Before &amp; After</a><a class="active" href="memberships.html">Memberships</a><a href="booking.html">Book</a><a href="contact.html">Contact</a></nav></div></header><main class="page-main"><section class="page-hero narrow"><div class="container"><span class="eyebrow">RECURRING REVENUE</span><h1>Memberships, treatment plans, packages, and gift-ready offers.</h1><p>Premium beauty brands often pair one-time services with recurring memberships or prepaid packages to improve retention.</p></div></section><section class="section"><div class="container membership-grid"><article class="membership-card"><span class="pill">Monthly</span><h2>Membership 1</h2><p>Monthly treatment placeholder with member rate, priority booking, and exclusive add-ons.</p><strong>Pricing placeholder</strong><a class="btn btn-dark" href="booking.html">Join Membership</a></article><article class="membership-card featured"><span class="pill">Best Value</span><h2>Package 1</h2><p>Multi-session package placeholder for transformative services or maintenance plans.</p><strong>Pricing placeholder</strong><a class="btn btn-dark" href="booking.html">Reserve Package</a></article><article class="membership-card"><span class="pill">Giftable</span><h2>Gift Card</h2><p>Gift card section placeholder for holidays, birthdays, bridal parties, and referral moments.</p><strong>Amount placeholder</strong><a class="btn btn-dark" href="contact.html">Inquire</a></article></div></section></main><footer class="footer minimal-footer"><div class="container footer-bottom"><small>© <span id="year"></span> Business Name</small></div></footer><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memberships | Business Name</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="topbar inner-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio</small></span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="gallery.html">Before &amp; After</a>
+        <a class="active" href="memberships.html">Memberships</a>
+        <a href="booking.html">Book</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero narrow">
+      <div class="container">
+        <span class="eyebrow">PRIVATE CLIENT PROGRAMS</span>
+        <h1>Memberships and packages presented like premium access, not discount blocks.</h1>
+        <p>This page now keeps recurring offers compact and elevated, with tabs that separate memberships from packages so the experience stays short and premium.</p>
+      </div>
+    </section>
+
+    <section class="section memberships-section">
+      <div class="container memberships-shell">
+        <div class="plan-switcher reveal" role="tablist" aria-label="Membership and package views">
+          <button class="plan-tab active" type="button" role="tab" aria-selected="true" aria-controls="plan-panel-memberships" id="plan-tab-memberships" data-plan-tab="memberships">Memberships</button>
+          <button class="plan-tab" type="button" role="tab" aria-selected="false" aria-controls="plan-panel-packages" id="plan-tab-packages" data-plan-tab="packages">Packages</button>
+        </div>
+
+        <div class="plan-panel active reveal delay-1" id="plan-panel-memberships" role="tabpanel" aria-labelledby="plan-tab-memberships" data-plan-panel="memberships">
+          <div class="plan-panel-copy">
+            <span class="pill">Recurring Access</span>
+            <h2>Memberships designed to feel like private client privileges.</h2>
+            <p>Use recurring offers for premium retention, smoother rebooking, and clearer value without pushing the page into a hard-sales format.</p>
+            <div class="plan-metrics">
+              <div><strong>Priority booking</strong><span>Reserved openings for members</span></div>
+              <div><strong>Monthly value</strong><span>Built-in upgrades and preferred pricing</span></div>
+              <div><strong>Retention</strong><span>Clear ongoing treatment pathways</span></div>
+            </div>
+            <div class="membership-actions">
+              <a class="btn btn-dark" href="contact.html?inquiryType=Membership%20Enrollment&amp;serviceInterest=Memberships">Request Membership Details</a>
+              <a class="btn btn-light" href="booking.html?service=glass-skin-consultation">Book Entry Consultation</a>
+            </div>
+          </div>
+          <div class="plan-card-stack">
+            <article class="membership-tier-card">
+              <span class="pill">Monthly</span>
+              <h3>Signature Skin Membership</h3>
+              <strong>$225 / month</strong>
+              <ul class="membership-benefits">
+                <li>One monthly treatment credit</li>
+                <li>Preferred facial upgrade pricing</li>
+                <li>Priority rescheduling support</li>
+              </ul>
+            </article>
+            <article class="membership-tier-card featured">
+              <span class="pill">Best Value</span>
+              <h3>Private Client Access</h3>
+              <strong>$395 / month</strong>
+              <ul class="membership-benefits">
+                <li>Rotating treatment credit and add-on access</li>
+                <li>Early access to premium openings</li>
+                <li>Luxury aftercare or product perks</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="plan-panel" id="plan-panel-packages" role="tabpanel" aria-labelledby="plan-tab-packages" data-plan-panel="packages" hidden>
+          <div class="plan-panel-copy">
+            <span class="pill">High-Ticket Packages</span>
+            <h2>Package pathways that support treatment plans and higher average order value.</h2>
+            <p>Keep prepaid offers structured, elevated, and easy to compare without stacking long pricing tables into the page.</p>
+            <div class="plan-metrics">
+              <div><strong>Series-led</strong><span>Great for sculpting and corrective work</span></div>
+              <div><strong>Gift-ready</strong><span>Easy to position as premium gifting</span></div>
+              <div><strong>Consult-first</strong><span>Supports custom treatment planning</span></div>
+            </div>
+            <div class="membership-actions">
+              <a class="btn btn-dark" href="contact.html?inquiryType=Package%20Inquiry&amp;serviceInterest=Packages">Ask About Packages</a>
+              <a class="btn btn-light" href="booking.html?service=sculpt-contour-session">Book Planning Session</a>
+            </div>
+          </div>
+          <div class="plan-card-stack">
+            <article class="membership-tier-card">
+              <span class="pill">Series</span>
+              <h3>Sculpting Series</h3>
+              <strong>Custom package pricing</strong>
+              <ul class="membership-benefits">
+                <li>Multi-session contouring schedule</li>
+                <li>Ideal for plan-based clients</li>
+                <li>Structured rebooking pathway</li>
+              </ul>
+            </article>
+            <article class="membership-tier-card featured">
+              <span class="pill">Event Edit</span>
+              <h3>Glow Ritual Bundle</h3>
+              <strong>Premium seasonal offer</strong>
+              <ul class="membership-benefits">
+                <li>Occasion-ready prep sequence</li>
+                <li>Luxury finishing service add-ons</li>
+                <li>Giftable and easy to merchandise</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band compact-cta-band">
+      <div class="container cta-grid premium-cta-grid">
+        <div>
+          <span class="eyebrow">RECURRING REVENUE</span>
+          <h2>Sell memberships and packages with the same visual standard as the core services.</h2>
+          <p>The page now feels cleaner, shorter, and more valuable, while still giving premium clients an easy next step into inquiry or planning.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-dark" href="contact.html?inquiryType=Membership%20Enrollment">Request Enrollment Info</a>
+          <a class="btn btn-light" href="services.html">View Core Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-mark">LOGO</span>
+          <span>
+            <strong>Business Name</strong>
+            <small>Luxury Beauty Studio</small>
+          </span>
+        </div>
+        <p>Premium booking, service merchandising, memberships, and inquiry flows designed for high-end beauty brands.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="gallery.html">Before &amp; After</a>
+        <a href="booking.html">Book</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="booking-policy.html">Booking Policy</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Business Phone<br />Business Email<br />Business Address</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Business Name. All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -13,7 +13,7 @@
 <body>
 <header class="topbar inner-header">
   <div class="container nav-wrap">
-    <a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio Demo</small></span></a>
+    <a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio</small></span></a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav">
       <a class="active" href="services.html">Services</a>
@@ -28,56 +28,166 @@
 <main class="page-main">
   <section class="page-hero narrow">
     <div class="container">
-      <span class="eyebrow">SERVICES PAGE DEMO</span>
-      <h1>Service architecture designed for premium beauty conversions.</h1>
-      <p>Each service block can support clear pricing, duration, candidacy notes, results expectations, FAQs, and add-on upsells.</p>
+      <span class="eyebrow">PREMIUM SERVICE DIRECTORY</span>
+      <h1>A refined service menu clients can filter, compare, and book from immediately.</h1>
+      <p>The page now works like a premium booking directory instead of a long list. Clients can switch categories quickly, evaluate treatments, and jump straight into a preselected booking flow.</p>
     </div>
   </section>
   <section class="section">
-    <div class="container service-layout">
-      <article class="service-full-card">
-        <div>
-          <span class="service-badge">Featured Service</span>
-          <h2>Service 1</h2>
-          <p>Use this area for a premium treatment description, ideal client profile, benefits, and what makes the experience distinct.</p>
-        </div>
-        <div class="service-meta">
-          <div><strong>Duration</strong><span>60 min</span></div>
-          <div><strong>Price</strong><span>Premium pricing</span></div>
-          <div><strong>Deposit</strong><span>Required</span></div>
-          <div><strong>Best for</strong><span>First-time or returning clients</span></div>
-        </div>
-      </article>
-      <article class="service-full-card alt">
-        <div>
-          <span class="service-badge">Popular Add-On</span>
-          <h2>Service 2</h2>
-          <p>Showcase upgrade potential with add-ons, aftercare kits, package rates, or paired treatments to lift average order value.</p>
-        </div>
-        <div class="service-meta">
-          <div><strong>Duration</strong><span>30 min</span></div>
-          <div><strong>Price</strong><span>Premium pricing</span></div>
-          <div><strong>Availability</strong><span>With qualifying service</span></div>
-          <div><strong>Upsell Type</strong><span>Package / add-on</span></div>
-        </div>
-      </article>
-      <article class="service-full-card">
-        <div>
-          <span class="service-badge">Consultation Path</span>
-          <h2>Service 3</h2>
-          <p>Some beauty businesses need consultation-first services. This layout supports candidacy disclaimers, prep notes, and policy reminders.</p>
-        </div>
-        <div class="service-meta">
-          <div><strong>Duration</strong><span>90 min</span></div>
-          <div><strong>Price</strong><span>Quoted after consult</span></div>
-          <div><strong>Consultation</strong><span>Required</span></div>
-          <div><strong>Policy</strong><span>Medical or consent notes</span></div>
-        </div>
-      </article>
+    <div class="container service-page-shell">
+      <div class="service-filter-bar reveal" role="tablist" aria-label="Filter service categories">
+        <button class="service-filter active" type="button" role="tab" aria-selected="true" data-service-filter="all">All Services</button>
+        <button class="service-filter" type="button" role="tab" aria-selected="false" data-service-filter="skin">Skin</button>
+        <button class="service-filter" type="button" role="tab" aria-selected="false" data-service-filter="lash">Lash &amp; Brow</button>
+        <button class="service-filter" type="button" role="tab" aria-selected="false" data-service-filter="body">Body</button>
+      </div>
+
+      <div class="service-menu-grid reveal delay-1">
+        <article class="service-card-premium" data-service-category="skin" data-book-url="booking.html?service=platinum-renewal-facial">
+          <div class="service-card-head">
+            <span class="service-badge">Skin</span>
+            <span class="service-price">$285+</span>
+          </div>
+          <h2>Platinum Renewal Facial</h2>
+          <p>A high-touch resurfacing and infusion facial designed for clients booking visible skin refinement with a luxury studio experience.</p>
+          <div class="service-card-meta">
+            <div><strong>75 min</strong><span>Advanced facial</span></div>
+            <div><strong>Deposit</strong><span>Required online</span></div>
+            <div><strong>Ideal for</strong><span>Dullness and texture</span></div>
+          </div>
+          <div class="service-card-actions">
+            <a class="btn btn-dark" href="booking.html?service=platinum-renewal-facial">Book Service</a>
+            <a class="text-link" href="booking.html?service=platinum-renewal-facial">Select this treatment →</a>
+          </div>
+        </article>
+
+        <article class="service-card-premium featured" data-service-category="skin" data-book-url="booking.html?service=glass-skin-consultation">
+          <div class="service-card-head">
+            <span class="service-badge">Skin</span>
+            <span class="service-price">$165</span>
+          </div>
+          <h2>Glass Skin Consultation</h2>
+          <p>Consult-first appointment built for custom treatment planning, product mapping, and premium upsell sequencing.</p>
+          <div class="service-card-meta">
+            <div><strong>90 min</strong><span>Private consult</span></div>
+            <div><strong>Includes</strong><span>Plan and recommendations</span></div>
+            <div><strong>Best for</strong><span>New premium clients</span></div>
+          </div>
+          <div class="service-card-actions">
+            <a class="btn btn-dark" href="booking.html?service=glass-skin-consultation">Book Service</a>
+            <a class="text-link" href="booking.html?service=glass-skin-consultation">Select this treatment →</a>
+          </div>
+        </article>
+
+        <article class="service-card-premium" data-service-category="lash" data-book-url="booking.html?service=architect-brow-design">
+          <div class="service-card-head">
+            <span class="service-badge">Lash &amp; Brow</span>
+            <span class="service-price">$110+</span>
+          </div>
+          <h2>Architect Brow Design</h2>
+          <p>Precision mapping, shape correction, and tinting positioned as a premium detail service rather than a basic appointment.</p>
+          <div class="service-card-meta">
+            <div><strong>60 min</strong><span>Mapping and tint</span></div>
+            <div><strong>Best for</strong><span>First-time brow guests</span></div>
+            <div><strong>Rebook</strong><span>4 to 6 weeks</span></div>
+          </div>
+          <div class="service-card-actions">
+            <a class="btn btn-dark" href="booking.html?service=architect-brow-design">Book Service</a>
+            <a class="text-link" href="booking.html?service=architect-brow-design">Select this treatment →</a>
+          </div>
+        </article>
+
+        <article class="service-card-premium" data-service-category="lash" data-book-url="booking.html?service=lift-lamination-ritual">
+          <div class="service-card-head">
+            <span class="service-badge">Lash &amp; Brow</span>
+            <span class="service-price">$145+</span>
+          </div>
+          <h2>Lift + Lamination Ritual</h2>
+          <p>A dual-service card structured for stronger average order value with polished aftercare and maintenance framing.</p>
+          <div class="service-card-meta">
+            <div><strong>75 min</strong><span>Lift and lamination</span></div>
+            <div><strong>Includes</strong><span>Finishing treatment</span></div>
+            <div><strong>Best for</strong><span>Event-ready definition</span></div>
+          </div>
+          <div class="service-card-actions">
+            <a class="btn btn-dark" href="booking.html?service=lift-lamination-ritual">Book Service</a>
+            <a class="text-link" href="booking.html?service=lift-lamination-ritual">Select this treatment →</a>
+          </div>
+        </article>
+
+        <article class="service-card-premium" data-service-category="body" data-book-url="booking.html?service=sculpt-contour-session">
+          <div class="service-card-head">
+            <span class="service-badge">Body</span>
+            <span class="service-price">$320+</span>
+          </div>
+          <h2>Sculpt + Contour Session</h2>
+          <p>A high-value body service presented with clearer outcomes, consultation notes, and package-ready positioning.</p>
+          <div class="service-card-meta">
+            <div><strong>50 min</strong><span>Targeted sculpting</span></div>
+            <div><strong>Series</strong><span>Available</span></div>
+            <div><strong>Best for</strong><span>Plan-based clients</span></div>
+          </div>
+          <div class="service-card-actions">
+            <a class="btn btn-dark" href="booking.html?service=sculpt-contour-session">Book Service</a>
+            <a class="text-link" href="booking.html?service=sculpt-contour-session">Select this treatment →</a>
+          </div>
+        </article>
+
+        <article class="service-card-premium" data-service-category="body" data-book-url="booking.html?service=full-body-glow-ritual">
+          <div class="service-card-head">
+            <span class="service-badge">Body</span>
+            <span class="service-price">$260+</span>
+          </div>
+          <h2>Full Body Glow Ritual</h2>
+          <p>An editorial-style ritual card built for luxury body polishing, event prep, and elevated seasonal promotions.</p>
+          <div class="service-card-meta">
+            <div><strong>80 min</strong><span>Glow and polish</span></div>
+            <div><strong>Perfect for</strong><span>Special occasions</span></div>
+            <div><strong>Upgrade path</strong><span>Membership ready</span></div>
+          </div>
+          <div class="service-card-actions">
+            <a class="btn btn-dark" href="booking.html?service=full-body-glow-ritual">Book Service</a>
+            <a class="text-link" href="booking.html?service=full-body-glow-ritual">Select this treatment →</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 </main>
-<footer class="footer minimal-footer"><div class="container footer-bottom"><small>© <span id="year"></span> Business Name</small></div></footer>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand footer-brand">
+        <span class="brand-mark">LOGO</span>
+        <span>
+          <strong>Business Name</strong>
+          <small>Luxury Beauty Studio</small>
+        </span>
+      </div>
+      <p>Premium booking, service merchandising, memberships, and inquiry flows designed for high-end beauty brands.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="gallery.html">Before &amp; After</a>
+      <a href="booking.html">Book</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="booking-policy.html">Booking Policy</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Business Phone<br />Business Email<br />Business Address</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© <span id="year"></span> Business Name. All rights reserved.</small>
+  </div>
+</footer>
 <script src="js/main.js"></script>
 </body>
 </html>

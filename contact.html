@@ -1,1 +1,125 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Contact | Business Name</title><link rel="stylesheet" href="css/styles.css" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></head><body><header class="topbar inner-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio Demo</small></span></a><button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="nav"><a href="services.html">Services</a><a href="team.html">Team</a><a href="gallery.html">Before &amp; After</a><a href="memberships.html">Memberships</a><a href="booking.html">Book</a><a class="active" href="contact.html">Contact</a></nav></div></header><main class="page-main"><section class="page-hero narrow"><div class="container"><span class="eyebrow">CONTACT & LEAD CAPTURE</span><h1>Consultation and lead inquiry flow.</h1><p>Use this page to capture inbound leads for consultations, bridal inquiries, provider applications, or package questions.</p></div></section><section class="section"><div class="container contact-grid"><div class="contact-card"><h2>Business details</h2><p>Business Name<br />Business Phone<br />Business Email<br />Business Address</p><div class="map-placeholder">Map placeholder</div></div><form class="form-card" id="leadForm"><h2>Request a consultation</h2><label>Full Name<input type="text" name="fullName" placeholder="Your name" required /></label><label>Email<input type="email" name="email" placeholder="you@example.com" required /></label><label>Phone<input type="tel" name="phone" placeholder="(000) 000-0000" required /></label><label>Service Interest<select name="serviceInterest"><option>Service 1</option><option>Service 2</option><option>Service 3</option><option>Membership</option></select></label><label>Message<textarea name="message" rows="5" placeholder="Tell us what you’re looking for"></textarea></label><button class="btn btn-dark" type="submit">Submit Inquiry</button><p class="form-note" id="leadFormMessage"></p></form></div></section></main><footer class="footer minimal-footer"><div class="container footer-bottom"><small>© <span id="year"></span> Business Name</small></div></footer><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Business Name</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="topbar inner-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio</small></span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="gallery.html">Before &amp; After</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="booking.html">Book</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero contact-hero">
+      <div class="container contact-hero-grid">
+        <div>
+          <span class="eyebrow">PRIVATE INQUIRY DESK</span>
+          <h1>Make the contact page feel like concierge intake, not a leftover form.</h1>
+          <p>This contact flow now supports consultations, memberships, package questions, and higher-value leads while keeping the page polished and mobile-friendly.</p>
+        </div>
+        <div class="concierge-card">
+          <span class="pill">Response Standards</span>
+          <h2>High-touch support for premium inquiries.</h2>
+          <div class="contact-mini-grid">
+            <article><strong>Same-day</strong><span>Lead response target</span></article>
+            <article><strong>Private</strong><span>Consultation handling</span></article>
+            <article><strong>Flexible</strong><span>Email, phone, or text reply</span></article>
+            <article><strong>Guided</strong><span>Membership and package support</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid contact-grid-premium">
+        <div class="contact-card contact-card-premium">
+          <h2>Studio details</h2>
+          <p>Business Name<br />Business Phone<br />Business Email<br />Business Address</p>
+          <div class="contact-mini-grid">
+            <article><strong>Consultations</strong><span>Available by request</span></article>
+            <article><strong>Memberships</strong><span>Enrollment support offered</span></article>
+            <article><strong>Best contact</strong><span>Email or private inquiry form</span></article>
+            <article><strong>Booking help</strong><span>Direct clients to the reservation page</span></article>
+          </div>
+          <div class="map-placeholder">Map placeholder</div>
+        </div>
+
+        <form class="form-card concierge-form" id="leadForm">
+          <h2>Request a private consultation</h2>
+          <div class="form-row two-col">
+            <label>Full Name<input type="text" name="fullName" placeholder="Your name" required /></label>
+            <label>Email<input type="email" name="email" placeholder="you@example.com" required /></label>
+          </div>
+          <div class="form-row two-col">
+            <label>Phone<input type="tel" name="phone" placeholder="(000) 000-0000" required /></label>
+            <label>Inquiry Type<select name="inquiryType" required><option value="">Select inquiry type</option><option value="Consultation">Consultation</option><option value="Membership Enrollment">Membership Enrollment</option><option value="Package Inquiry">Package Inquiry</option><option value="Bridal Inquiry">Bridal Inquiry</option><option value="General Question">General Question</option></select></label>
+          </div>
+          <div class="form-row two-col">
+            <label>Service Interest<select name="serviceInterest"><option value="">Select service interest</option><option value="Signature Skin">Signature Skin</option><option value="Lash & Brow">Lash &amp; Brow</option><option value="Body Rituals">Body Rituals</option><option value="Memberships">Memberships</option><option value="Packages">Packages</option></select></label>
+            <label>Preferred Reply<select name="preferredContact"><option value="Email">Email</option><option value="Phone">Phone</option><option value="Text">Text</option></select></label>
+          </div>
+          <label>Notes<textarea name="notes" rows="5" placeholder="Tell us about the service, timeline, or questions you want answered."></textarea></label>
+          <label class="checkbox"><input type="checkbox" name="policy" required /> I agree to the business contacting me about my inquiry.</label>
+          <div class="booking-actions">
+            <button class="btn btn-dark" type="submit">Send Private Inquiry</button>
+            <a class="btn btn-light" href="booking.html">Open Booking</a>
+          </div>
+          <p class="form-note" id="leadFormMessage" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-mark">LOGO</span>
+          <span>
+            <strong>Business Name</strong>
+            <small>Luxury Beauty Studio</small>
+          </span>
+        </div>
+        <p>Premium booking, service merchandising, memberships, and inquiry flows designed for high-end beauty brands.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="gallery.html">Before &amp; After</a>
+        <a href="booking.html">Book</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="booking-policy.html">Booking Policy</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Business Phone<br />Business Email<br />Business Address</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Business Name. All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,1 +1,169 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Before & After | Business Name</title><link rel="stylesheet" href="css/styles.css" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></head><body><header class="topbar inner-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio Demo</small></span></a><button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="nav"><a href="services.html">Services</a><a href="team.html">Team</a><a class="active" href="gallery.html">Before &amp; After</a><a href="memberships.html">Memberships</a><a href="booking.html">Book</a><a href="contact.html">Contact</a></nav></div></header><main class="page-main"><section class="page-hero narrow"><div class="container"><span class="eyebrow">RESULTS GALLERY</span><h1>Interactive before-and-after modules for beauty service storytelling.</h1><p>Swap these placeholders with approved client images once the business provides real assets and consent.</p></div></section><section class="section"><div class="container compare-grid"><article class="compare-card tall"><div class="compare-labels"><span>Before</span><span>After</span></div><div class="compare-stage"><div class="compare before"><span>Initial condition</span></div><div class="compare after"><span>Finished result</span></div><input class="range-slider" type="range" min="0" max="100" value="52" aria-label="Before and after slider" /></div><h3>Service 1 Result</h3></article><article class="compare-card tall"><div class="compare-labels"><span>Before</span><span>After</span></div><div class="compare-stage"><div class="compare before"><span>Initial condition</span></div><div class="compare after"><span>Finished result</span></div><input class="range-slider" type="range" min="0" max="100" value="46" aria-label="Before and after slider" /></div><h3>Service 2 Result</h3></article></div></section></main><footer class="footer minimal-footer"><div class="container footer-bottom"><small>© <span id="year"></span> Business Name</small></div></footer><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Before &amp; After | Business Name</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="topbar inner-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio</small></span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a class="active" href="gallery.html">Before &amp; After</a>
+        <a href="memberships.html">Memberships</a>
+        <a href="booking.html">Book</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <section class="page-hero narrow">
+      <div class="container">
+        <span class="eyebrow">CURATED RESULTS ARCHIVE</span>
+        <h1>Showcase transformation stories without making the gallery feel like a dump of images.</h1>
+        <p>The gallery now behaves more like a premium results archive, with category filtering, interactive comparisons, and room for outcome-focused storytelling.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container gallery-page-shell">
+        <div class="gallery-filter-bar reveal" role="tablist" aria-label="Filter gallery categories">
+          <button class="gallery-filter active" type="button" role="tab" aria-selected="true" data-gallery-filter="all">All Results</button>
+          <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-gallery-filter="skin">Skin</button>
+          <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-gallery-filter="lash">Lash &amp; Brow</button>
+          <button class="gallery-filter" type="button" role="tab" aria-selected="false" data-gallery-filter="body">Body</button>
+        </div>
+
+        <div class="gallery-archive reveal delay-1">
+          <article class="gallery-story-card compare-card tall" data-gallery-card data-gallery-category="skin">
+            <div class="compare-labels"><span>Before</span><span>After</span></div>
+            <div class="compare-stage">
+              <div class="compare before"><span>Congestion / texture / dehydration</span></div>
+              <div class="compare after"><span>Smoother tone / brighter finish / polished glow</span></div>
+              <div class="slider-line"></div>
+              <input class="range-slider" type="range" min="0" max="100" value="52" aria-label="Skin result slider" />
+            </div>
+            <div class="result-story-head"><span class="service-badge">Skin</span><strong>Platinum Renewal Facial</strong></div>
+            <p>Use this result story area to highlight prep, treatment focus, and the premium finishing details clients actually care about.</p>
+            <div class="gallery-note-list">
+              <div><strong>Focus</strong><span>Resurfacing and barrier support</span></div>
+              <div><strong>Ideal client</strong><span>Texture, dullness, and event prep</span></div>
+            </div>
+            <a class="btn btn-light" href="booking.html?service=platinum-renewal-facial">Book This Service</a>
+          </article>
+
+          <article class="gallery-story-card compare-card tall" data-gallery-card data-gallery-category="skin">
+            <div class="compare-labels"><span>Before</span><span>Plan</span></div>
+            <div class="compare-stage">
+              <div class="compare before"><span>Unclear routine / inconsistent progress</span></div>
+              <div class="compare after"><span>Structured plan / treatment roadmap / product edit</span></div>
+              <div class="slider-line"></div>
+              <input class="range-slider" type="range" min="0" max="100" value="48" aria-label="Consultation result slider" />
+            </div>
+            <div class="result-story-head"><span class="service-badge">Skin</span><strong>Glass Skin Consultation</strong></div>
+            <p>Premium clients often convert through clarity. This card can sell the treatment plan, not just the treatment itself.</p>
+            <div class="gallery-note-list">
+              <div><strong>Focus</strong><span>Consultation-led planning</span></div>
+              <div><strong>Ideal client</strong><span>New guest or long-term skin program</span></div>
+            </div>
+            <a class="btn btn-light" href="booking.html?service=glass-skin-consultation">Book This Service</a>
+          </article>
+
+          <article class="gallery-story-card compare-card tall" data-gallery-card data-gallery-category="lash">
+            <div class="compare-labels"><span>Before</span><span>After</span></div>
+            <div class="compare-stage">
+              <div class="compare before"><span>Uneven shape / low definition / sparse detail</span></div>
+              <div class="compare after"><span>Crisp lines / lifted shape / polished finish</span></div>
+              <div class="slider-line"></div>
+              <input class="range-slider" type="range" min="0" max="100" value="54" aria-label="Brow result slider" />
+            </div>
+            <div class="result-story-head"><span class="service-badge">Lash &amp; Brow</span><strong>Architect Brow Design</strong></div>
+            <p>A results card for clients who are choosing shape refinement, event definition, or a premium brow-first visit.</p>
+            <div class="gallery-note-list">
+              <div><strong>Focus</strong><span>Mapping and tinting</span></div>
+              <div><strong>Ideal client</strong><span>First-time brow guest</span></div>
+            </div>
+            <a class="btn btn-light" href="booking.html?service=architect-brow-design">Book This Service</a>
+          </article>
+
+          <article class="gallery-story-card compare-card tall" data-gallery-card data-gallery-category="body">
+            <div class="compare-labels"><span>Before</span><span>After</span></div>
+            <div class="compare-stage">
+              <div class="compare before"><span>Flat finish / lack of contour / no event prep</span></div>
+              <div class="compare after"><span>Refined glow / sculpted look / polished finish</span></div>
+              <div class="slider-line"></div>
+              <input class="range-slider" type="range" min="0" max="100" value="51" aria-label="Body ritual slider" />
+            </div>
+            <div class="result-story-head"><span class="service-badge">Body</span><strong>Full Body Glow Ritual</strong></div>
+            <p>Use this card for luxury body rituals, sculpting packages, or occasion-ready treatment sequences.</p>
+            <div class="gallery-note-list">
+              <div><strong>Focus</strong><span>Glow, polish, and sculpted finish</span></div>
+              <div><strong>Ideal client</strong><span>Pre-event or package client</span></div>
+            </div>
+            <a class="btn btn-light" href="booking.html?service=full-body-glow-ritual">Book This Service</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band compact-cta-band">
+      <div class="container cta-grid premium-cta-grid">
+        <div>
+          <span class="eyebrow">RESULTS THAT SELL</span>
+          <h2>Use the gallery to reinforce premium outcomes, not just display imagery.</h2>
+          <p>The page is now shorter, easier to scan, and more conversion-aware, with filtered result stories that support the service and booking flow.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-dark" href="services.html">Open Services</a>
+          <a class="btn btn-light" href="booking.html">Start Booking</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-mark">LOGO</span>
+          <span>
+            <strong>Business Name</strong>
+            <small>Luxury Beauty Studio</small>
+          </span>
+        </div>
+        <p>Premium booking, service merchandising, memberships, and inquiry flows designed for high-end beauty brands.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <a href="services.html">Services</a>
+        <a href="team.html">Team</a>
+        <a href="gallery.html">Before &amp; After</a>
+        <a href="booking.html">Book</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="booking-policy.html">Booking Policy</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Business Phone<br />Business Email<br />Business Address</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Business Name. All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

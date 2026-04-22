@@ -13,7 +13,7 @@
 <body>
 <header class="topbar inner-header">
   <div class="container nav-wrap">
-    <a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio Demo</small></span></a>
+    <a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio</small></span></a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav">
       <a href="services.html">Services</a>
@@ -26,46 +26,85 @@
   </div>
 </header>
 <main class="page-main">
-  <section class="page-hero narrow">
-    <div class="container">
-      <span class="eyebrow">BOOKING DEMO</span>
-      <h1>Reserve a service with a provider, date, time, and deposit.</h1>
-      <p>This flow is designed for beauty brands that need a premium front-end experience with Stripe deposit support and Vercel-ready backend integration.</p>
+  <section class="page-hero booking-hero">
+    <div class="container booking-hero-grid">
+      <div class="booking-hero-copy">
+        <span class="eyebrow">PRIVATE BOOKING FLOW</span>
+        <h1>A luxury reservation page with live service context built in.</h1>
+        <p>This booking flow is designed to feel more like a premium concierge experience than a standard form. Clients can review treatment context, choose a preferred provider, and secure the appointment with a deposit-ready path.</p>
+        <div class="booking-hero-points">
+          <article>
+            <strong>Private intake</strong>
+            <span>Capture guest preferences before the appointment begins.</span>
+          </article>
+          <article>
+            <strong>Deposit-secured</strong>
+            <span>Reserve premium time slots with a polished checkout handoff.</span>
+          </article>
+          <article>
+            <strong>Mobile refined</strong>
+            <span>Designed to stay elegant and easy to complete on phones.</span>
+          </article>
+        </div>
+      </div>
+      <div class="booking-hero-card">
+        <span class="pill">Reservation Flow</span>
+        <h2>Three clean steps from treatment selection to deposit collection.</h2>
+        <div class="booking-step-list">
+          <div><strong>01</strong><span>Select the service and preferred provider.</span></div>
+          <div><strong>02</strong><span>Review the live treatment profile and availability.</span></div>
+          <div><strong>03</strong><span>Confirm the deposit and move into checkout.</span></div>
+        </div>
+        <p>Built for high-end beauty brands that want the booking stage to feel as elevated as the brand itself.</p>
+      </div>
     </div>
   </section>
-  <section class="section">
+  <section class="section booking-stage-section">
     <div class="container booking-grid">
-      <form class="booking-form" id="bookingForm">
-        <div class="form-row two-col">
-          <label>Full Name<input type="text" name="fullName" required placeholder="Your name" /></label>
-          <label>Email<input type="email" name="email" required placeholder="you@example.com" /></label>
+      <div class="booking-form-shell">
+        <div class="booking-form-intro">
+          <span class="pill">Client Intake</span>
+          <h2>Reserve your preferred experience.</h2>
+          <p>Choose the treatment, provider, and time window below. The service profile and reservation summary update live so clients stay oriented before checkout.</p>
         </div>
-        <div class="form-row two-col">
-          <label>Phone<input type="tel" name="phone" required placeholder="(000) 000-0000" /></label>
-          <label>Provider<select name="provider" required><option value="">Choose provider</option><option>Stylist 1</option><option>Stylist 2</option><option>Stylist 3</option><option>First Available</option></select></label>
-        </div>
-        <div class="form-row two-col">
-          <label>Service<select name="service" required><option value="">Choose service</option><option value="service-1">Service 1</option><option value="service-2">Service 2</option><option value="service-3">Service 3</option></select></label>
-          <label>Appointment Date<input type="date" name="date" id="appointmentDate" required /></label>
-        </div>
-        <div class="form-row">
-          <span class="label-title">Select time</span>
-          <div class="time-slots" id="timeSlots"></div>
-          <input type="hidden" name="time" id="selectedTime" required />
-        </div>
-        <div class="form-row two-col">
-          <label>Add-on<select name="addon"><option>None</option><option>Upgrade 1</option><option>Upgrade 2</option></select></label>
-          <label>Deposit Amount<select name="deposit"><option value="25">$25 deposit</option><option value="50">$50 deposit</option><option value="100">$100 deposit</option></select></label>
-        </div>
-        <label>Notes<textarea name="notes" rows="4" placeholder="Preferences, consultation notes, accessibility info, etc."></textarea></label>
-        <label class="checkbox"><input type="checkbox" name="policy" required /> I agree to the booking and cancellation policy.</label>
-        <div class="booking-actions">
-          <button class="btn btn-dark" type="submit">Pay Deposit & Reserve</button>
-          <button class="btn btn-light" type="button" id="saveDraftBtn">Save Booking Draft</button>
-        </div>
-        <p class="form-note" id="bookingMessage"></p>
-      </form>
+        <form class="booking-form" id="bookingForm">
+          <p class="booking-form-caption">All premium appointment windows are held once the selected deposit has been processed.</p>
+          <div class="form-row two-col">
+            <label>Full Name<input type="text" name="fullName" required placeholder="Your name" /></label>
+            <label>Email<input type="email" name="email" required placeholder="you@example.com" /></label>
+          </div>
+          <div class="form-row two-col">
+            <label>Phone<input type="tel" name="phone" required placeholder="(000) 000-0000" /></label>
+            <label>Provider<select name="provider" required><option value="">Choose provider</option><option>Amelia Rose</option><option>Sienna Vale</option><option>Noa Hart</option><option>First Available</option></select></label>
+          </div>
+          <div class="form-row two-col">
+            <label>Service<select name="service" required><option value="">Choose service</option><option value="platinum-renewal-facial">Platinum Renewal Facial</option><option value="glass-skin-consultation">Glass Skin Consultation</option><option value="architect-brow-design">Architect Brow Design</option><option value="lift-lamination-ritual">Lift + Lamination Ritual</option><option value="sculpt-contour-session">Sculpt + Contour Session</option><option value="full-body-glow-ritual">Full Body Glow Ritual</option></select></label>
+            <label>Appointment Date<input type="date" name="date" id="appointmentDate" required /></label>
+          </div>
+          <div class="form-row">
+            <span class="label-title">Select time</span>
+            <div class="time-slots" id="timeSlots"></div>
+            <input type="hidden" name="time" id="selectedTime" required />
+          </div>
+          <div class="form-row two-col">
+            <label>Add-on<select name="addon"><option>None</option><option>Hydration Upgrade</option><option>LED Recovery Boost</option><option>Luxury Aftercare Edit</option></select></label>
+            <label>Deposit Amount<select name="deposit"><option value="50">$50 deposit</option><option value="100" selected>$100 deposit</option><option value="150">$150 deposit</option></select></label>
+          </div>
+          <label>Notes<textarea name="notes" rows="4" placeholder="Preferences, consultation notes, accessibility info, etc."></textarea></label>
+          <label class="checkbox"><input type="checkbox" name="policy" required /> I agree to the booking and cancellation policy.</label>
+          <div class="booking-actions">
+            <button class="btn btn-dark" type="submit">Pay Deposit & Reserve</button>
+            <button class="btn btn-light" type="button" id="saveDraftBtn">Save Booking Draft</button>
+          </div>
+          <p class="form-note" id="bookingMessage" aria-live="polite"></p>
+        </form>
+      </div>
       <aside class="booking-sidebar">
+        <div class="booking-spotlight" id="bookingSpotlight" aria-live="polite">
+          <span class="pill">Service Spotlight</span>
+          <h2>Select a treatment to preview the experience.</h2>
+          <p>The chosen service will populate a richer profile here with duration, investment, and deposit guidance.</p>
+        </div>
         <div class="calendar-card">
           <div class="calendar-head">
             <button id="prevMonth" type="button">←</button>
@@ -77,15 +116,52 @@
           </div>
           <div class="calendar-grid" id="calendarGrid"></div>
         </div>
-        <div class="summary-card" id="bookingSummary">
+        <div class="summary-card" id="bookingSummary" aria-live="polite">
           <h2>Booking summary</h2>
           <p>Select service details to preview the deposit checkout summary.</p>
+        </div>
+        <div class="booking-policy-card">
+          <span class="pill">Studio Policy</span>
+          <p>Deposits protect reserved appointment windows, support prep time, and apply to the final service balance unless otherwise noted.</p>
         </div>
       </aside>
     </div>
   </section>
 </main>
-<footer class="footer minimal-footer"><div class="container footer-bottom"><small>© <span id="year"></span> Business Name</small></div></footer>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand footer-brand">
+        <span class="brand-mark">LOGO</span>
+        <span>
+          <strong>Business Name</strong>
+          <small>Luxury Beauty Studio</small>
+        </span>
+      </div>
+      <p>Premium booking, service merchandising, memberships, and inquiry flows designed for high-end beauty brands.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="gallery.html">Before &amp; After</a>
+      <a href="booking.html">Book</a>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="booking-policy.html">Booking Policy</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Business Phone<br />Business Email<br />Business Address</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© <span id="year"></span> Business Name. All rights reserved.</small>
+  </div>
+</footer>
 <script src="js/main.js"></script>
 <script src="js/booking.js"></script>
 </body>
