@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Appointment | Business Name</title>
-  <meta name="description" content="Calendar-based booking demo with provider selection, deposits, and Stripe-ready checkout flow." />
+  <title>Book an Appointment | Maison Aurelle</title>
+  <meta name="description" content="Reserve a facial, brow, or body appointment at Maison Aurelle with a simple deposit-secured booking flow." />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,7 @@
 <body>
 <header class="topbar inner-header">
   <div class="container nav-wrap">
-    <a class="brand" href="index.html"><span class="brand-mark">LOGO</span><span><strong>Business Name</strong><small>Luxury Beauty Studio</small></span></a>
+    <a class="brand" href="index.html"><span class="brand-mark">MA</span><span><strong>Maison Aurelle</strong><small>Private Skin Atelier</small></span></a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     <nav class="nav">
       <a href="services.html">Services</a>
@@ -26,49 +26,22 @@
   </div>
 </header>
 <main class="page-main">
-  <section class="page-hero booking-hero">
-    <div class="container booking-hero-grid">
-      <div class="booking-hero-copy">
-        <span class="eyebrow">PRIVATE BOOKING FLOW</span>
-        <h1>A luxury reservation page with live service context built in.</h1>
-        <p>This booking flow is designed to feel more like a premium concierge experience than a standard form. Clients can review treatment context, choose a preferred provider, and secure the appointment with a deposit-ready path.</p>
-        <div class="booking-hero-points">
-          <article>
-            <strong>Private intake</strong>
-            <span>Capture guest preferences before the appointment begins.</span>
-          </article>
-          <article>
-            <strong>Deposit-secured</strong>
-            <span>Reserve premium time slots with a polished checkout handoff.</span>
-          </article>
-          <article>
-            <strong>Mobile refined</strong>
-            <span>Designed to stay elegant and easy to complete on phones.</span>
-          </article>
-        </div>
-      </div>
-      <div class="booking-hero-card">
-        <span class="pill">Reservation Flow</span>
-        <h2>Three clean steps from treatment selection to deposit collection.</h2>
-        <div class="booking-step-list">
-          <div><strong>01</strong><span>Select the service and preferred provider.</span></div>
-          <div><strong>02</strong><span>Review the live treatment profile and availability.</span></div>
-          <div><strong>03</strong><span>Confirm the deposit and move into checkout.</span></div>
-        </div>
-        <p>Built for high-end beauty brands that want the booking stage to feel as elevated as the brand itself.</p>
+  <section class="page-hero narrow simple-booking-hero">
+    <div class="container">
+      <span class="eyebrow">BOOK AN APPOINTMENT</span>
+      <h1>Reserve your visit.</h1>
+      <p>Choose your service, provider, date, and time. Deposits apply to your final balance.</p>
+      <div class="hero-actions booking-hero-actions">
+        <a class="btn btn-dark" href="#bookingForm">Start Booking</a>
+        <a class="btn btn-light" href="services.html">View Services</a>
       </div>
     </div>
   </section>
   <section class="section booking-stage-section">
-    <div class="container booking-grid">
-      <div class="booking-form-shell">
-        <div class="booking-form-intro">
-          <span class="pill">Client Intake</span>
-          <h2>Reserve your preferred experience.</h2>
-          <p>Choose the treatment, provider, and time window below. The service profile and reservation summary update live so clients stay oriented before checkout.</p>
-        </div>
+    <div class="container booking-grid booking-grid-simple">
+      <div class="booking-form-shell simple-booking-shell">
         <form class="booking-form" id="bookingForm">
-          <p class="booking-form-caption">All premium appointment windows are held once the selected deposit has been processed.</p>
+          <p class="booking-form-caption">Complete the details below to secure your appointment.</p>
           <div class="form-row two-col">
             <label>Full Name<input type="text" name="fullName" required placeholder="Your name" /></label>
             <label>Email<input type="email" name="email" required placeholder="you@example.com" /></label>
@@ -93,17 +66,17 @@
           <label>Notes<textarea name="notes" rows="4" placeholder="Preferences, consultation notes, accessibility info, etc."></textarea></label>
           <label class="checkbox"><input type="checkbox" name="policy" required /> I agree to the booking and cancellation policy.</label>
           <div class="booking-actions">
-            <button class="btn btn-dark" type="submit">Pay Deposit & Reserve</button>
-            <button class="btn btn-light" type="button" id="saveDraftBtn">Save Booking Draft</button>
+            <button class="btn btn-dark" type="submit">Reserve with Deposit</button>
+            <a class="btn btn-light" href="services.html">Back to Services</a>
           </div>
+          <p class="form-note">Deposits apply to your final service total.</p>
           <p class="form-note" id="bookingMessage" aria-live="polite"></p>
         </form>
       </div>
-      <aside class="booking-sidebar">
-        <div class="booking-spotlight" id="bookingSpotlight" aria-live="polite">
-          <span class="pill">Service Spotlight</span>
-          <h2>Select a treatment to preview the experience.</h2>
-          <p>The chosen service will populate a richer profile here with duration, investment, and deposit guidance.</p>
+      <aside class="booking-sidebar simple-booking-sidebar">
+        <div class="summary-card" id="bookingSummary" aria-live="polite">
+          <h2>Your booking</h2>
+          <p>Select service details to preview your appointment summary.</p>
         </div>
         <div class="calendar-card">
           <div class="calendar-head">
@@ -116,14 +89,6 @@
           </div>
           <div class="calendar-grid" id="calendarGrid"></div>
         </div>
-        <div class="summary-card" id="bookingSummary" aria-live="polite">
-          <h2>Booking summary</h2>
-          <p>Select service details to preview the deposit checkout summary.</p>
-        </div>
-        <div class="booking-policy-card">
-          <span class="pill">Studio Policy</span>
-          <p>Deposits protect reserved appointment windows, support prep time, and apply to the final service balance unless otherwise noted.</p>
-        </div>
       </aside>
     </div>
   </section>
@@ -132,13 +97,13 @@
   <div class="container footer-grid">
     <div>
       <div class="brand footer-brand">
-        <span class="brand-mark">LOGO</span>
+        <span class="brand-mark">MA</span>
         <span>
-          <strong>Business Name</strong>
-          <small>Luxury Beauty Studio</small>
+          <strong>Maison Aurelle</strong>
+          <small>Private Skin Atelier</small>
         </span>
       </div>
-      <p>Premium booking, service merchandising, memberships, and inquiry flows designed for high-end beauty brands.</p>
+      <p>Maison Aurelle offers private facials, brow design, and body rituals in a calm Nashville studio built around thoughtful service and polished results.</p>
     </div>
     <div>
       <h4>Pages</h4>
@@ -155,11 +120,11 @@
     </div>
     <div>
       <h4>Contact</h4>
-      <p>Business Phone<br />Business Email<br />Business Address</p>
+      <p>(615) 555-0148<br />hello@maisonaurelle.com<br />214 Mercer Ave, Suite 300, Nashville, TN 37203</p>
     </div>
   </div>
   <div class="container footer-bottom">
-    <small>© <span id="year"></span> Business Name. All rights reserved.</small>
+    <small>© <span id="year"></span> Maison Aurelle. All rights reserved.</small>
   </div>
 </footer>
 <script src="js/main.js"></script>

@@ -96,7 +96,7 @@ const scrollServiceSlider = (sliderName, direction) => {
   const slider = document.querySelector(`[data-slider="${sliderName}"]`);
   if (!slider) return;
 
-  const firstCard = slider.querySelector('.service-slide');
+  const firstCard = slider.firstElementChild;
   const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : 300;
   slider.scrollBy({ left: direction * (cardWidth + 16), behavior: 'smooth' });
 };
@@ -138,6 +138,12 @@ const bindFilters = (buttonSelector, itemSelector, buttonKey, itemKey) => {
 
 bindFilters('[data-service-filter]', '[data-service-category]', 'serviceFilter', 'serviceCategory');
 bindFilters('[data-gallery-filter]', '[data-gallery-card]', 'galleryFilter', 'galleryCategory');
+
+const initialServiceCategory = pageParams.get('category');
+if (initialServiceCategory) {
+  const matchingServiceFilter = Array.from(document.querySelectorAll('[data-service-filter]')).find((button) => button.dataset.serviceFilter === initialServiceCategory);
+  if (matchingServiceFilter) matchingServiceFilter.click();
+}
 
 document.querySelectorAll('[data-service-category]').forEach((card) => {
   const bookUrl = card.dataset.bookUrl;

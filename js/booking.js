@@ -197,25 +197,25 @@ function updateSummary() {
   renderBookingSpotlight(serviceData);
 
   bookingSummary.innerHTML = `
-    <h2>Reservation Summary</h2>
+    <h2>Your Booking</h2>
     <div class="summary-service">
       <span class="pill">${serviceData ? serviceData.category : 'Service pending'}</span>
-      <strong>${serviceData ? selectedServiceLabel : 'Select a service to preview the reservation profile.'}</strong>
-      <p>${serviceData ? serviceData.description : 'Choose a treatment to see the service profile, investment context, and a more polished deposit summary before checkout.'}</p>
+      <strong>${serviceData ? selectedServiceLabel : 'Select a service to begin.'}</strong>
+      <p>${serviceData ? `${serviceData.duration} · ${serviceData.price}` : 'Choose a service to preview your appointment details.'}</p>
     </div>
     <div class="summary-list">
-      <div class="summary-row"><span>Guest</span><strong>${data.fullName || 'Add client name'}</strong></div>
+      <div class="summary-row"><span>Guest</span><strong>${data.fullName || 'Add name'}</strong></div>
       <div class="summary-row"><span>Provider</span><strong>${data.provider || 'Choose provider'}</strong></div>
-      <div class="summary-row"><span>Appointment</span><strong>${formatAppointmentDate(data.date)}</strong></div>
-      <div class="summary-row"><span>Arrival window</span><strong>${data.time || 'Select time'}</strong></div>
+      <div class="summary-row"><span>Date</span><strong>${formatAppointmentDate(data.date)}</strong></div>
+      <div class="summary-row"><span>Time</span><strong>${data.time || 'Select time'}</strong></div>
       <div class="summary-row"><span>Add-on</span><strong>${addonDisplay}</strong></div>
+      <div class="summary-row"><span>Deposit</span><strong>${depositDisplay}</strong></div>
     </div>
     <div class="summary-highlight">
       <div><span>Service Duration</span><strong>${serviceData?.duration || 'Updates after selection'}</strong></div>
       <div><span>Investment</span><strong>${serviceData?.price || 'Updates after selection'}</strong></div>
-      <div><span>Deposit Today</span><strong>${depositDisplay}</strong></div>
+      <div><span>Provider</span><strong>${data.provider || 'Choose provider'}</strong></div>
     </div>
-    <p class="form-note">Demo note: connect this summary to Stripe Checkout, reminders, and CRM automations on launch.</p>
   `;
 }
 
