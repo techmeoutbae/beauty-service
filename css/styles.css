@@ -925,3 +925,46 @@ input, select, textarea {
   .summary-row { flex-direction: column; }
   .summary-row strong { text-align: left; }
 }
+
+.plan-card-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.membership-tier-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  height: 100%;
+  min-height: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.membership-tier-card h3 {
+  margin: 0;
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+}
+
+.membership-tier-card strong {
+  display: block;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.membership-benefits {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: .85rem;
+}
+
+.membership-benefits li {
+  margin: 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
