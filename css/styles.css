@@ -968,3 +968,237 @@ input, select, textarea {
   line-height: 1.6;
   overflow-wrap: anywhere;
 }
+
+/* --- Mobile overflow fixes for booking page --- */
+.booking-grid,
+.booking-hero-grid,
+.booking-form-shell,
+.booking-form,
+.booking-sidebar,
+.booking-spotlight,
+.booking-policy-card,
+.summary-card,
+.form-row,
+.two-col {
+  min-width: 0;
+}
+
+.booking-form,
+.booking-spotlight,
+.booking-policy-card,
+.summary-card,
+.contact-card-premium,
+.concierge-form {
+  overflow: hidden;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+label {
+  min-width: 0;
+}
+
+.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.booking-actions,
+.hero-actions,
+.membership-actions,
+.service-card-actions {
+  min-width: 0;
+}
+
+.booking-actions .btn,
+.membership-actions .btn,
+.service-card-actions .btn {
+  min-width: 0;
+}
+
+@media (max-width: 960px) {
+  .booking-grid,
+  .booking-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form-shell,
+  .booking-spotlight,
+  .booking-policy-card,
+  .summary-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .booking-hero-points,
+  .spotlight-meta,
+  .summary-highlight {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .booking-form,
+  .booking-form-shell,
+  .booking-spotlight,
+  .booking-policy-card,
+  .summary-card {
+    padding: 1rem;
+    border-radius: 22px;
+  }
+
+  .two-col,
+  .service-meta,
+  .service-card-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-actions,
+  .membership-actions,
+  .service-card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .booking-actions .btn,
+  .membership-actions .btn,
+  .service-card-actions .btn {
+    width: 100%;
+  }
+
+  .time-slots {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .65rem;
+  }
+
+  .time-slot {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+  }
+
+  .calendar-grid {
+    gap: .35rem;
+  }
+
+  .calendar-day {
+    min-height: 48px;
+    border-radius: 14px;
+    font-size: .95rem;
+  }
+
+  .summary-row {
+    flex-direction: column;
+    gap: .35rem;
+  }
+
+  .summary-row strong {
+    text-align: left;
+  }
+}
+
+/* --- Membership cards desktop cleanup --- */
+.plan-card-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.membership-tier-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.35rem;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.membership-tier-card h3 {
+  margin: 0;
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.membership-benefits {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: .75rem;
+}
+
+.membership-benefits li {
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+/* --- Membership slider on mobile --- */
+@media (max-width: 960px) {
+  .plan-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card-stack {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 86%);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: .35rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .plan-card-stack::-webkit-scrollbar {
+    display: none;
+  }
+
+  .membership-tier-card {
+    height: 100%;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .plan-card-stack {
+    grid-auto-columns: 92%;
+  }
+
+  .membership-tier-card {
+    padding: 1.15rem;
+    border-radius: 24px;
+  }
+
+  .membership-tier-card h3 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+}
+
+/* Fix contact page mini-card text contrast */
+.concierge-card .contact-mini-grid article {
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(255,255,255,.18);
+}
+
+.concierge-card .contact-mini-grid article strong {
+  color: var(--text);
+}
+
+.concierge-card .contact-mini-grid article span {
+  color: var(--muted);
+}
+
+/* Keep the main dark-card text styling, but don't affect the mini-cards */
+.concierge-card > span,
+.concierge-card > p,
+.concierge-card > h2 {
+  color: #fff;
+}
